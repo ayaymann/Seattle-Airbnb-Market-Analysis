@@ -156,7 +156,7 @@ The interactive report includes four primary analytical views:
 ### 👥 Project Team — *Data Divas*
 * Aya Ayman
 
-* Banan Mag
+* Banan Magdy
 
 * Habiba Wa
 
