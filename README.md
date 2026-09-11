@@ -143,12 +143,12 @@ The interactive report includes four primary analytical views:
 ### 📂 Repository Structure
 ```
 ├── Data/
-│   ├── Seattle_Airbnb_Database.sql    # Database SQL script
+│   ├── Seattle_Airbnb_Database.sql          # Database SQL script
 ├── Dashboard/
 │   ├── Seattle_Airbnb_Market_Analysis.pbix  # Power BI report file
-│   └── Screenshots/                   # High-res view of dashboard pages
+│   └── Screenshots/                         # High-res view of dashboard pages
 ├── Documentation/
-│   └── Airbnb_Data_Divas_Presentation.pptx # Project presentation deck
+│   └── Airbnb_Data_Divas_Presentation.pptx  # Project presentation deck
 └── README.md
 ```
 ---
