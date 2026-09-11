@@ -5,16 +5,16 @@
 ![Data Analysis](https://img.shields.io/badge/Data_Analytics-0078D4?style=for-the-badge)
 
 ## 📌 Executive Summary
-This project delivers an end-to-end market analysis of Seattle Airbnb listings, pricing trends, and guest reviews. By extracting business signals from raw listing data using **SQL Server** and constructing an interactive analytical dashboard in **Power BI**, this project provides data-driven insights to optimize host strategies, pricing models, and property positioning[cite: 1, 2].
+This project delivers an end-to-end market analysis of Seattle Airbnb listings, pricing trends, and guest reviews. By extracting business signals from raw listing data using **SQL Server** and constructing an interactive analytical dashboard in **Power BI**, this project provides data-driven insights to optimize host strategies, pricing models, and property positioning.
 
 ---
 
 ## 💡 Key Business Insights
-* **Price vs. Demand & Seasonality:** Nightly prices peak significantly during summer months (July–August at ~$150/night) compared to winter lows (~$122/night in January)[cite: 1].
-* **Listing Breakdown:** Entire homes/apartments account for **66.55%** of listings, private rooms make up **30.38%**, and shared rooms comprise **3.06%**[cite: 1].
-* **Price & Quality Myth:** There is virtually **no correlation (r = 0.12)** between nightly price and review ratings—higher prices do not guarantee better guest experiences[cite: 1].
-* **Trust & Volume:** A strong positive correlation **(r = 0.68)** exists between review count and overall rating, showing that established experience builds guest trust[cite: 1].
-* **Geographic Premium:** Properties in central areas like Downtown command a significant price premium (~$164/night avg) compared to outer neighborhoods (~$95/night avg)[cite: 1].
+* **Price vs. Demand & Seasonality:** Nightly prices peak significantly during summer months (July–August at ~$150/night) compared to winter lows (~$122/night in January).
+* **Listing Breakdown:** Entire homes/apartments account for **66.55%** of listings, private rooms make up **30.38%**, and shared rooms comprise **3.06%**.
+* **Price & Quality Myth:** There is virtually **no correlation (r = 0.12)** between nightly price and review ratings—higher prices do not guarantee better guest experiences.
+* **Trust & Volume:** A strong positive correlation **(r = 0.68)** exists between review count and overall rating, showing that established experience builds guest trust.
+* **Geographic Premium:** Properties in central areas like Downtown command a significant price premium (~$164/night avg) compared to outer neighborhoods (~$95/night avg).
 
 ---
 
@@ -82,21 +82,21 @@ Data transformations were applied in Power Query across all three source dataset
 The Power BI model is built as an optimized Star Schema centered around Dim Listing and Dim Date, connecting to Fact Calendar and Fact Reviews via 1-to-Many relationships.
 
 ```text
-                       +-------------------+
-                       |     Dim Date      |
-                       +-------------------+
-                                 | (date)
-                                 v
-+-------------------+   +-------------------+   +-------------------+
-|    Fact Reviews   |-->|    Dim Listing    |<--|   Fact Calendar   |
-+-------------------+   +-------------------+   +-------------------+
-    (listing_id)               (id)                 (listing_id)
+                                  +-------------------+
+                                  |     Dim Date      |
+                                  +-------------------+
+                                            | (date)
+                                            v
+          +-------------------+   +-------------------+   +-------------------+
+          |    Fact Reviews   |-->|    Dim Listing    |<--|   Fact Calendar   |
+          +-------------------+   +-------------------+   +-------------------+
+               (listing_id)               (id)                 (listing_id)
 ```
 
 ---
 
 ### 4. Key DAX Calculations
-Core DAX measures developed for business KPI tracking[cite: 2]:
+Core DAX measures developed for business KPI tracking:
 
 ```dax
 // Date Table Generation
@@ -131,12 +131,12 @@ Superhost Rate = DIVIDE ( CALCULATE ( [Total Listings], 'Dim Listing'[host_is_su
 ---
 
 ### 📊 Dashboard Overview 
-The interactive report includes four primary analytical views[cite: 2]:
+The interactive report includes four primary analytical views:
 
 1. Overview Page: Macro KPIs ($127.7 Avg Price, 85K Reviews, 4K Total Listings), room type distribution, and monthly price trends.
 2. Location & Property Analysis: Geographic price vs. demand distributions, top 10 most expensive neighborhoods, and property type volume.
 3. Pricing & Reviews Page: Interactive price vs. rating scatter plots, minimum stay impact, and price variations across room categories.
-4. Insights Page: High-level strategic conclusions and correlation breakdowns for executive stakeholders[cite: 1].
+4. Insights Page: High-level strategic conclusions and correlation breakdowns for executive stakeholders.
 
 ---
 
@@ -154,13 +154,13 @@ The interactive report includes four primary analytical views[cite: 2]:
 ---
 
 ### 👥 Project Team — *Data Divas*
-* Aya Ayman [cite: 1]
+* Aya Ayman
 
-* Banan Magdy [cite: 1]
+* Banan Magdy
 
-* Habiba Walid [cite: 1]
+* Habiba Walid
 
-* Mennatullah Hussien [cite: 1]
+* Mennatullah Hussien
 
-* Mirna Elghonimy [cite: 1]
+* Mirna Elghonimy
 
